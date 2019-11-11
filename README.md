@@ -52,6 +52,7 @@ git clone https://github.com/askbuddie/Buddies-movie.git
 To run your project in your local machine type this command in terminal
 ```
 cd buddies-movie
+npm install
 npm start
 ```
 --- 
