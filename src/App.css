@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css?family=Manjari&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Bree+Serif&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Manjari', sans-serif;
+  color: #fff;
+}
+
+.main{
+  width: 100%;
+  min-height: 100vh;
+  background: #202020;
+}
+
+.main .header{
+  text-align: center;
+  width: 100%;
+}
+
+.header h1{
+  padding: 30px 20px 20px 20px;
+  font-family: 'Bree Serif', serif;
+}
+
+.main .movie-list{
+  text-align: center;
+
+}
+
+.movies .movie-poster{
+  border: 5px solid #fff;
+  border-radius: 5px;
+  width: 240px;
+  height: 355px;
+}
+
+.movies .movie-poster:hover{
+  border: 5px solid #75c74e;
+  transition: 0.3s;
+}
+
+.movies .movie-title{
+  font-size: calc(1vw + 10px);
+  padding: 5px 0;
+}
+
+.movies {
+  position: relative;
+}
+
+.movie-details {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.movies:hover .movie-poster {
+  opacity: 0.3;
+}
+
+.movies:hover .movie-details {
+  opacity: 1;
+}
+
+.movie-details-btn {
+  background-color: #75c74e;
+  color: white;
+  font-size: clac(1vw + 5px);
+  font-weight: lighter;
+  padding: 5px 20px 5px 20px;
+  border-radius: 5px;
+}
+
+.imdb-logo{
+  width: 40px;
+}
+
+.footer{
+  color: #aaa;
+  text-align: center;
+  height: 150px;
+  background: #2c2c2c;
+  padding: 40px 0;
+}
+
+.footer .red-title{
+  color: orangered;
+}
