@@ -92,6 +92,20 @@ Yes ❤️then welcome to [Ask Buddie Open Source Program.](https://www.askbuddi
       <sub><b>Shudarshan Rai</b></sub></a>
       <br />
     </td>
+   <td align="center">
+      <a href="https://github.com/Aju100">
+      <img src="https://avatars3.githubusercontent.com/u/29862610?s=460&v=4" width="100px;" alt="Shudarshan Rai"/>
+      <br />
+      <sub><b>Aju Tamang</b></sub></a>
+      <br />
+    </td>
+    <td align="center">
+      <a href="https://github.com/anuraghazra">
+      <img src="https://avatars1.githubusercontent.com/u/35374649?s=460&v=4" width="100px;" alt="Shudarshan Rai"/>
+      <br />
+      <sub><b>Anurag Hazra</b></sub></a>
+      <br />
+    </td>
     </tr>
     </table>
 
