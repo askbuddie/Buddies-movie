@@ -1,6 +1,6 @@
 <p align="center">
     <a href="https://www.askbuddie.com">
-        <img src="./src/component/assets/logo1.png" width="200px" align="center" alt="askbuddie-icon"/>
+        <img src="./src/assets/logo1.png" width="200px" align="center" alt="askbuddie-icon"/>
     </a>
 </p>
 <h1 align="center" style="border: 0;"> Buddies Movie🎥 </h1>

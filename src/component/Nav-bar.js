@@ -1,5 +1,6 @@
 import React from 'react';
-import SiteLogo from './assets/logo.png';
+import SiteLogo from '../assets/logo.png';
+
 import {
   BrowserRouter as Router,
   Link
