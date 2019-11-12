@@ -27,9 +27,7 @@ The following software is required to be installed on your system before you pro
 * Node 8.x
 * Npm 3.x
 * Git
- 
-```
-Example to install dependencies
+
 ```
  
 ## Installation
