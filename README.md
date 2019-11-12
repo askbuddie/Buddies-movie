@@ -43,7 +43,7 @@ npm -v
 Now open terminal and clone this github project or download
 
 ```
-git clone github
+git clone https://github.com/askbuddie/Buddies-movie.git
 ```
 
 
