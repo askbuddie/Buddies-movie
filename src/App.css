@@ -35,6 +35,15 @@
   border-radius: 5px;
   width: 240px;
   height: 355px;
+  margin: 0 auto 10px auto;
+}
+
+.movie-poster img {
+  width: 100%;
+}
+
+.default-poster {
+  padding: 90px 0 0 40px;
 }
 
 .movies .movie-poster:hover{
@@ -93,4 +102,8 @@
 
 .footer .red-title{
   color: orangered;
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }
