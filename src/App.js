@@ -3,10 +3,10 @@ import React from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import Navbar from './component/Nav-Bar';
 import Header from './component/Header';
 import Movies from './component/Movies';
 import Footer from './component/Footer';
+import Navbar from './component/Nav-bar';
 
 function App() {
   return (
@@ -19,7 +19,6 @@ function App() {
       <Footer />
     </div>
   );
-
 }
 
 export default App;
