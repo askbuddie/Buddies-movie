@@ -8,7 +8,7 @@ import { withData, withError } from '../utils/common';
 const fetchMovieList = async (page, limit) => {
   try {
     let { data: res } = await axios.get(
-      `https://yts.lt/api/v2/list_movies.json?page=${page}&&limit=${limit}`
+      `https://yts.mx/api/v2/list_movies.json?page=${page}&&limit=${limit}`
     );
 
     return withData(res.data.movies);
