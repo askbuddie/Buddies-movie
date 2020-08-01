@@ -9,16 +9,16 @@ import Footer from './component/Footer';
 import Navbar from './component/Nav-bar';
 
 function App() {
-  return (
-    <div className="main">
-      <Navbar />
-      <Header />
-      <div className="movie-list">
-        <Movies />
-      </div>
-      <Footer />
-    </div>
-  );
+    return (
+        <div className='main'>
+            <Navbar />
+            <Header />
+            <div className='movie-list'>
+                <Movies />
+            </div>
+            <Footer />
+        </div>
+    );
 }
 
 export default App;
