@@ -6,8 +6,8 @@ const toString = Object.prototype.toString;
  * @param {Any} arg
  * @returns {Boolean}
  */
-export const isObject = arg => {
-  return toString.call(arg) === '[object Object]';
+export const isObject = (arg) => {
+    return toString.call(arg) === '[object Object]';
 };
 
 /**
@@ -16,27 +16,27 @@ export const isObject = arg => {
  * @param {Any} arg
  * @returns {Object}
  */
-export const withError = arg => {
-  if (isObject(arg)) {
-    const { message = '', ...rest } = arg;
+export const withError = (arg) => {
+    if (isObject(arg)) {
+        const { message = '', ...rest } = arg;
+
+        return {
+            data: null,
+            error: {
+                status: true,
+                message,
+                ...rest,
+            },
+        };
+    }
 
     return {
-      data: null,
-      error: {
-        status: true,
-        message,
-        ...rest
-      }
+        data: null,
+        error: {
+            status: true,
+            message: arg,
+        },
     };
-  }
-
-  return {
-    data: null,
-    error: {
-      status: true,
-      message: arg
-    }
-  };
 };
 
 /**
@@ -45,9 +45,9 @@ export const withError = arg => {
  * @param {Any} data
  * @returns {Object}
  */
-export const withData = data => {
-  return {
-    error: false,
-    data
-  };
+export const withData = (data) => {
+    return {
+        error: false,
+        data,
+    };
 };
