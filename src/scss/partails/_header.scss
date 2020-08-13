@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Bree+Serif&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+  color: #fff;
+}
+
+.main{
+  width: 100%;
+  min-height: 100vh;
+  background: #202020;
+}
+
+.main .header{
+  text-align: center;
+  width: 100%;
+}
+
+.header h1{
+  padding: 30px 20px 20px 20px;
+  font-family: 'Bree Serif', serif;
+}

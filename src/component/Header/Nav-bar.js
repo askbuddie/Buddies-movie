@@ -1,5 +1,5 @@
 import React from 'react';
-import SiteLogo from '../assets/logo.png';
+import SiteLogo from '../../assets/logo.png';
 
 import { BrowserRouter as Router, Link } from 'react-router-dom';
 
@@ -34,7 +34,7 @@ function Navbar() {
                     id='navbarSupportedContent'
                 >
                     <ul className='navbar-nav mr-auto'></ul>
-                    <form className='form-inline'>
+                    {/* <form className='form-inline'>
                         <input
                             className='form-control mr-sm-2'
                             type='search'
@@ -47,7 +47,7 @@ function Navbar() {
                         >
                             Search
                         </button>
-                    </form>
+                    </form> */}
                 </div>
             </nav>
         </Router>

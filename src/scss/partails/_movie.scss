@@ -1,0 +1,73 @@
+.main .movie-list{
+    text-align: center;
+  
+  }
+
+  .movies{
+    .movies-link{
+      text-decoration: none;
+      color: #fff;
+    }
+  }
+  
+  .movies .movie-poster{
+    border: 5px solid #fff;
+    border-radius: 5px;
+    width: 240px;
+    height: 355px;
+    margin: 0 auto 10px auto;
+  }
+  
+  .movie-poster img {
+    width: 100%;
+  }
+  
+  .default-poster {
+    padding: 90px 0 0 40px;
+  }
+  
+  .movies .movie-poster:hover{
+    border: 5px solid #75c74e;
+    transition: 0.3s;
+
+  }
+  
+  .movies .movie-title{
+    font-size: calc(1vw + 10px);
+    padding: 5px 0;
+  }
+  
+  .movies {
+    position: relative;
+  }
+  
+  .movie-details {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  .movies:hover .movie-poster {
+    opacity: 0.3;
+  }
+  .movies:hover .movie-details {
+    opacity: 1;
+  }
+  
+  .movie-details-btn {
+    background-color: #75c74e;
+    color: white;
+    font-size: 1.1em;
+    font-weight: lighter;
+    padding: 5px 20px 5px 20px;
+    border-radius: 5px;
+  }
+  
+  .imdb-logo{
+    width: 40px;
+  }

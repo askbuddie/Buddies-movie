@@ -1,0 +1,200 @@
+.break-line {
+  display: block;
+  margin: 30px 0 0 0;
+}
+
+.loading-bg{
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  background: rgba(0, 0, 0, .8);
+
+  .spinner-grow{
+    width: 5rem;
+    height: 5rem;
+  }
+}
+
+.movie-details-container {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 200vh;
+  max-height: 200vh;
+  .movie-main-details {
+    padding: 40px 0 0 0;
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.5fr;
+    margin: 0 auto;
+
+    .movie-poster-left {
+      .main-movie-poster {
+        border: 5px solid #fff;
+        border-radius: 5px;
+        width: 240px;
+        height: 355px;
+        overflow: hidden;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          cursor: pointer;
+
+          &:hover{
+            transform: scale(1.2);
+            transition: .3s;
+          }
+        }
+      }
+    }
+
+    .movie-details-middle {
+      .movie-details-title {
+        h1 {
+          font-size: 2em;
+        }
+      }
+      .movie-genres {
+        h4 {
+          font-size: 1.2em;
+        }
+      }
+
+      .available-in {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .formats {
+          display: flex;
+          flex-direction: row;
+          .available-format {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 5px;
+            border: 1px solid #e9e9e928;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 0 0 5px;
+            cursor: pointer;
+          }
+        }
+      }
+
+      .ratings {
+        width: 70px;
+        .ratings-counts {
+          margin: 15px 0 0 0;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          .imdb-icon{
+            width: 40px;
+          }
+          
+          .rating-icon{
+            width: 20px;
+          }
+        }
+      }
+    }
+
+    .movie-specs {
+      .tech-specs {
+        h2 {
+          line-height: 3
+          0px;
+        }
+        .tech-specs-left-content {
+          .specs-box {
+            background: #000;
+            width: 100%;
+            height: fit-content;
+            padding: 5px 10px 5px 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-radius: 4px;
+            margin: 10px 0 0 0;
+
+            .specs {
+              display: flex;
+              align-items: center;
+            }
+            .specs-info {
+              margin: 0 0 0 10px;
+            }
+            .specs-img {
+              width: 20px;
+              height: 20px;
+            }
+
+            .peers {
+              margin: 0 0 5px 0;
+            }
+          }
+          .upload-date {
+            margin: 30px 0 0 0;
+          }
+        }
+      }
+
+      .dis-title{
+          margin: 30px 0 0 0;
+      }
+      p {
+        margin: 10px 0 0 0;
+      }
+    }
+  }
+
+  .movie-trailer-video {
+    width: 90%;
+    margin: 100px auto;
+  }
+  .movie-trailer-grid {
+    margin: 20px 0 0 0;
+    display: flex;
+    flex-direction: row;
+
+    .similar-movies {
+      margin: 0 0 0 40px;
+      width: 90%;
+      .similar-movies-right-contents {
+        h2 {
+          line-height: 50px;
+        }
+        .similar-movies-right {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          .similar-movie {
+            width: 100px;
+            border: 5px solid #fff;
+            border-radius: 5px;
+            width: 120px;
+            height: 150px;
+            overflow: hidden;
+            cursor: pointer;
+            display: flex;
+            margin:  10px 0 0 10px;
+            img {
+              object-fit: cover;
+              width: 100%;
+              height: 100%;
+            }
+
+            &:hover {
+              border: 5px solid #75c74e;
+              transition: 0.3s;
+            }
+          }
+        }
+      }
+    }
+  }
+}
