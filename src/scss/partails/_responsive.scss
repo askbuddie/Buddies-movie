@@ -15,6 +15,12 @@
     }
 }
 
+@media (max-width:1063px){
+    .movie-details-container{
+        height: 240vh !important;
+    }
+}
+
 @media (max-width:930px){
     .movie-details-container .movie-main-details{
         grid-template-columns: .7fr 1fr !important;
@@ -39,9 +45,36 @@
     }
 }
 
+@media (max-width:778px){
+    .movie-details-container{
+        height: 290vh !important;
+     .movie-trailer-grid{
+        flex-direction: column !important;
+    }
+}
+}
+
+@media (max-width:672px){
+    .movie-details-container .movie-main-details{
+        grid-template-columns: 1fr 1fr !important;
+    }
+}
+
 @media (max-width:663px){
     .movie-details-container .movie-main-details{
         grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width:661px){
+    .movie-details-container .movie-main-details{
+        grid-template-columns: 1fr !important;
+    }
+}
+
+@media (max-width:641px){
+    .movie-details-container{
+        height: 330vh !important;
     }
 }
 
@@ -65,8 +98,11 @@
 
 @media (max-width:560px){
     .movie-details-container{
-        height: 250vh;
-        max-height: 250vh;
+        height: 380vh !important;
+    }
+
+    .movie-details-container .movie-trailer-grid .similar-movies{
+        margin: 0 auto !important;
     }
 }
 
@@ -78,15 +114,31 @@
 }
 
 @media (max-width:463px){
+    .movie-details-container{
+        height: 420vh !important;
+     .movie-main-details .movie-specs .tech-specs .tech-specs-left-content .specs-box{
+        display: grid !important;
+        grid-template-columns: 1fr 1fr 1fr !important;
+        grid-row-gap: 2em;
+    }
+}
+}
+
+@media (max-width:415px){
     .movie-details-container .movie-main-details .movie-specs .tech-specs .tech-specs-left-content .specs-box{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr !important;
     }
 }
 
-@media (max-width:389px){
-    .movie-details-container .movie-main-details .movie-specs .tech-specs .tech-specs-left-content .specs-box{
-        grid-template-columns: 1fr 1fr 1fr;
+@media (max-width:391px){
+    .movie-details-container{
+        height: 440vh !important;
+    }
+}
+
+@media (max-width:337px){
+    .trailer-iframe{
+        width: 250px;
     }
 }
 
@@ -95,4 +147,3 @@
         grid-template-columns: 1fr 1fr;
     }
 }
-
