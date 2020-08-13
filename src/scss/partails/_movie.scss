@@ -61,11 +61,14 @@
   
   .movie-details-btn {
     background-color: #75c74e;
-    color: white;
-    font-size: 1.1em;
-    font-weight: lighter;
     padding: 5px 20px 5px 20px;
     border-radius: 5px;
+    
+    a{
+      color: white !important;
+      font-size: 1.1em;
+      font-weight: lighter;
+    }
   }
   
   .imdb-logo{

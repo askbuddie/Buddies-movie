@@ -26,7 +26,7 @@ const MovieCard = ({ movie }) => (
                 <h3 className='g'>{movie.genres[1]}</h3>
                 <h3 className='g'>{movie.genres[2]}</h3>
                 <h3 className='g'>{movie.genres[3]}</h3>
-                <div className="movie-details-btn"><Link to={`/movie-details/${movie.id}`}>Movie Details</Link></div>
+                <div className="movie-details-btn"><Link style={{color:'#fff'}} to={`/movie-details/${movie.id}`}>Movie Details</Link></div>
             </div>
             <h3 className='movie-title'>{movie.title + '(' + movie.year + ')'}</h3>
             <p className='movie-rating'>
