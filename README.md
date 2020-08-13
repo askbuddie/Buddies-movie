@@ -3,7 +3,7 @@
         <img src="./src/assets/logo1.png" width="200px" align="center" alt="askbuddie-icon"/>
     </a>
 </p>
-<h1 align="center" style="border: 0;"> Buddies Movie [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) </h1>
+<h1 align="center" style="border: 0;"> Buddies Movie </h1>
 
 
 It's a react app version 1.0, Cloned as YTS sites made with YTS [API](https://yts.lt/api) . This app shows all the trendings , new and old movies through the API . This react project is begginer friendly, so no need much react complex knowledge. [Live Demo](https://buddies-movie.herokuapp.com/)
