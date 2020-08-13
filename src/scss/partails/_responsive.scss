@@ -17,7 +17,7 @@
 
 @media (max-width:1063px){
     .movie-details-container{
-        height: 240vh !important;
+        height: 220vh !important;
     }
 }
 
@@ -47,7 +47,7 @@
 
 @media (max-width:778px){
     .movie-details-container{
-        height: 290vh !important;
+        height: 260vh !important;
      .movie-trailer-grid{
         flex-direction: column !important;
     }
@@ -74,7 +74,7 @@
 
 @media (max-width:641px){
     .movie-details-container{
-        height: 330vh !important;
+        height: 300vh !important;
     }
 }
 
@@ -98,7 +98,7 @@
 
 @media (max-width:560px){
     .movie-details-container{
-        height: 380vh !important;
+        height: 350vh !important;
     }
 
     .movie-details-container .movie-trailer-grid .similar-movies{
@@ -115,7 +115,7 @@
 
 @media (max-width:463px){
     .movie-details-container{
-        height: 420vh !important;
+        height: 370vh !important;
      .movie-main-details .movie-specs .tech-specs .tech-specs-left-content .specs-box{
         display: grid !important;
         grid-template-columns: 1fr 1fr 1fr !important;
@@ -132,7 +132,7 @@
 
 @media (max-width:391px){
     .movie-details-container{
-        height: 440vh !important;
+        height: 390vh !important;
     }
 }
 
@@ -145,5 +145,11 @@
 @media (max-width:326px){
     .movie-details-container .movie-main-details .movie-specs .tech-specs .tech-specs-left-content .specs-box{
         grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width:320px){
+    .movie-details-container {
+        height: 440vh !important;
     }
 }
