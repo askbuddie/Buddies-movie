@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import yts from '../../api';
 import { Link } from 'react-router-dom'
 
@@ -12,7 +12,12 @@ import LangIcon from '../../assets/speaker.svg';
 import SeedsIcon from '../../assets/seeds.svg';
 import PeersIcon from '../../assets/peers.svg';
 
+const buddiesScroll = (ref) => {
+    window.scrollTo({top: 0, left: ref.current.offsetTop, behavior: 'smooth'});
+}
+
 const MoviesDeatils = ({ match }) => {
+    const scrollRef = useRef(null);
     const movie_id = match.params.id;
     const [movieDetail, setMovieDetail] = useState([]);
     const [genres, setGenres] = useState([]);
@@ -21,7 +26,9 @@ const MoviesDeatils = ({ match }) => {
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
+        
         (async () => {
+            setIsLoading(true);
             const fetchMovieDetails = await yts.get(`api/v2/movie_details.json/`, {
                 params: {
                     movie_id,
@@ -41,7 +48,7 @@ const MoviesDeatils = ({ match }) => {
             setSimilarMovies(fetchSimilarMovies.data.data.movies)
             setIsLoading(false);
         })();
-    },[] )
+    },[movie_id] )
 
     const circularLoading = isLoading && (
         <div className="loading-bg d-flex justify-content-center align-items-center">
@@ -61,7 +68,7 @@ const MoviesDeatils = ({ match }) => {
     return (
         <>
             {circularLoading}
-            <div className="movie-details-container" style={Style.containerBg}>
+            <div ref={scrollRef} className="movie-details-container" style={Style.containerBg}>
                 <div className="movie-main-details">
                     <div className="movie-poster-left">
                         <div className="main-movie-poster">
@@ -182,7 +189,7 @@ const MoviesDeatils = ({ match }) => {
                                     {similarMovie.map((movie, i) => {
                                         return (
                                             <div key={i} className="similar-movie">
-                                                <Link to={`/movie-details/${movie.id}`}>
+                                                <Link to={`/movie-details/${movie.id}`} onClick={() => buddiesScroll(scrollRef)}>
                                                     <img src={movie.medium_cover_image} />
                                                 </Link>
                                             </div>
