@@ -1,8 +1,6 @@
 import React from 'react';
 import SiteLogo from '../../assets/logo.png';
 
-import { Link } from 'react-router-dom';
-
 function Navbar() {
     return (
         <nav className='navbar navbar-expand-lg navbar-light bg-dark'>
