@@ -53,7 +53,7 @@ const Movies = () => {
             <span className='sr-only'>Loading...</span>
         </div>
     );
-
+    console.log(currentPage);
     return (
         <>
             {console.log(movies)}
@@ -61,6 +61,7 @@ const Movies = () => {
                 <div className='row justify-content-center m-5'>
                     {errorMsg}
                     {movies.map((movie) => {
+                        console.log(movie);
                         return <MovieCard key={movie.id} movie={movie} />;
                     })}
 
