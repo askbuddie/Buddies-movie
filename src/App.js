@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -12,17 +12,17 @@ import MovieDetails from './component/Movie-Details/Movies-Details';
 
 function App() {
     return (
-<div className="main">
-      <Navbar />
-      <Router>         
-        <Route path="/" exact  component={Header}/>
-        <div className="movie-list">
-        <Route path="/" exact  component={Movies}/>
+        <div className='main'>
+            <Router>
+                <Navbar />
+                <Route path='/' exact component={Header} />
+                <div className='movie-list'>
+                    <Route path='/' exact component={Movies} />
+                </div>
+                <Route path='/movie-details/:id' component={MovieDetails} />
+                <Footer />
+            </Router>
         </div>
-        <Route path="/movie-details/:id" component={MovieDetails} />
-        <Footer />
-      </Router>
-    </div>
     );
 }
 

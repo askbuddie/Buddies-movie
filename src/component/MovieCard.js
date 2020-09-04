@@ -22,13 +22,22 @@ const MovieCard = ({ movie }) => (
                 />
             </div>
             <div className='movie-details'>
-                <h3 className='g'>{movie.genres[0]}</h3>
-                <h3 className='g'>{movie.genres[1]}</h3>
-                <h3 className='g'>{movie.genres[2]}</h3>
-                <h3 className='g'>{movie.genres[3]}</h3>
-                <div className="movie-details-btn"><Link style={{color:'#fff'}} to={`/movie-details/${movie.id}`}>Movie Details</Link></div>
+                <h3 className='g'>{movie.genres && movie.genres[0]}</h3>
+                <h3 className='g'>{movie.genres && movie.genres[1]}</h3>
+                <h3 className='g'>{movie.genres && movie.genres[2]}</h3>
+                <h3 className='g'>{movie.genres && movie.genres[3]}</h3>
+                <div className='movie-details-btn'>
+                    <Link
+                        style={{ color: '#fff' }}
+                        to={`/movie-details/${movie.id}`}
+                    >
+                        Movie Details
+                    </Link>
+                </div>
             </div>
-            <h3 className='movie-title'>{movie.title + '(' + movie.year + ')'}</h3>
+            <h3 className='movie-title'>
+                {movie.title + '(' + movie.year + ')'}
+            </h3>
             <p className='movie-rating'>
                 <img className='imdb-logo' src={imdb} alt='movie ratings' />{' '}
                 {movie.rating}
