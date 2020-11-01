@@ -12,7 +12,7 @@ const fetchMovieList = async (page, limit) => {
                 limit,
             },
         });
-        console.log(res);
+
         return withData(res.data.movies);
     } catch (err) {
         console.log(err);
@@ -53,15 +53,13 @@ const Movies = () => {
             <span className='sr-only'>Loading...</span>
         </div>
     );
-    console.log(currentPage);
+
     return (
         <>
-            {console.log(movies)}
             <div className='container'>
                 <div className='row justify-content-center m-5'>
                     {errorMsg}
                     {movies.map((movie) => {
-                        console.log(movie);
                         return <MovieCard key={movie.id} movie={movie} />;
                     })}
 
