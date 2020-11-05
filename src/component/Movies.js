@@ -12,7 +12,7 @@ const fetchMovieList = async (page, limit) => {
                 limit,
             },
         });
-        console.log(res);
+
         return withData(res.data.movies);
     } catch (err) {
         console.log(err);
@@ -36,7 +36,6 @@ const Movies = () => {
             const { data, error } = await fetchMovieList(currentPage, limit);
 
             if (error) {
-                console.log(error);
                 setIsLoading(false);
 
                 return setError(error.message);
@@ -48,20 +47,17 @@ const Movies = () => {
     }, [currentPage]);
 
     let errorMsg = error && <span>{error}</span>;
-    let circularLoading = isLoading && (
+    let circularLoading = isLoading &&
         <div className='spinner-border' role='status'>
             <span className='sr-only'>Loading...</span>
         </div>
-    );
-    console.log(currentPage);
+
     return (
         <>
-            {console.log(movies)}
             <div className='container'>
                 <div className='row justify-content-center m-5'>
                     {errorMsg}
                     {movies.map((movie) => {
-                        console.log(movie);
                         return <MovieCard key={movie.id} movie={movie} />;
                     })}
 

@@ -2,7 +2,7 @@ import React from 'react';
 
 function Header() {
     return (
-        <div className='header'>
+        <div className='header container'>
             <h1>Download YTS YIFY movies: HD smallest size</h1>
             <p>
                 Here you will be able to

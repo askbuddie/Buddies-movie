@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 
 //assets
 import imdb from '../assets/imdb.svg';
@@ -27,12 +27,20 @@ const MovieCard = ({ movie }) => (
                 <h3 className='g'>{movie.genres && movie.genres[2]}</h3>
                 <h3 className='g'>{movie.genres && movie.genres[3]}</h3>
                 <div className='movie-details-btn'>
-                    <Link
+                    {/* <Link
                         style={{ color: '#fff' }}
                         to={`/movie-details/${movie.id}`}
                     >
                         Movie Details
-                    </Link>
+                    </Link> */}
+
+                    {/* solved: validateDOMNesting(...): <a> cannot appear as a descendant of <a>. */}
+                    <button
+                        style={{ color: '#fff',padding: "0", background: "none", border: "none" }}
+                        onClick={() => <Redirect to={`/movie-details/${movie.id}`} />}
+                    >
+                        Movie Details
+                    </button>
                 </div>
             </div>
             <h3 className='movie-title'>

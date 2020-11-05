@@ -6,6 +6,7 @@ const toString = Object.prototype.toString;
  * @param {Any} arg
  * @returns {Boolean}
  */
+
 export const isObject = (arg) => {
     return toString.call(arg) === '[object Object]';
 };

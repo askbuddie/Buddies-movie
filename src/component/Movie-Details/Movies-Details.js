@@ -13,7 +13,7 @@ import SeedsIcon from '../../assets/seeds.svg';
 import PeersIcon from '../../assets/peers.svg';
 
 const buddiesScroll = (ref) => {
-    window.scrollTo({top: 0, left: ref.current.offsetTop, behavior: 'smooth'});
+    window.scrollTo({ top: 0, left: ref.current.offsetTop, behavior: 'smooth' });
 }
 
 const MoviesDeatils = ({ match }) => {
@@ -26,7 +26,7 @@ const MoviesDeatils = ({ match }) => {
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
-        
+
         (async () => {
             setIsLoading(true);
             const fetchMovieDetails = await yts.get(`api/v2/movie_details.json/`, {
@@ -48,7 +48,7 @@ const MoviesDeatils = ({ match }) => {
             setSimilarMovies(fetchSimilarMovies.data.data.movies)
             setIsLoading(false);
         })();
-    },[movie_id] )
+    }, [movie_id])
 
     const circularLoading = isLoading && (
         <div className="loading-bg d-flex justify-content-center align-items-center">
@@ -69,132 +69,134 @@ const MoviesDeatils = ({ match }) => {
         <>
             {circularLoading}
             <div ref={scrollRef} className="movie-details-container" style={Style.containerBg}>
-                <div className="movie-main-details">
-                    <div className="movie-poster-left">
-                        <div className="main-movie-poster">
-                            <img src={movieDetail.medium_cover_image} alt={movieDetail.slug} />
-                        </div>
-                    </div>
-                    <div className="movie-details-middle">
-                        <div className="movie-details-title">
-                            <h1>{movieDetail.title}</h1>
-                        </div>
-                        <span className="break-line"></span>
-                        <div className="movie-genres">
-                            <h4>{movieDetail.year}</h4>
-                            <h4>{genres.map((genre, i) => {
-                                return (<i key={i}>{genre} /</i>);
-                            })} </h4>
-                        </div>
-
-                        <div className="available-in">
-                            <div>Available in:</div>
-                            <div className="formats">
-                                {
-                                    specs.map((res, i) => {
-                                        return <div key={i} className="available-format">{res.quality}</div>
-                                    })
-                                }
+                <div style={{padding: "0 5vw 50px 0"}}>
+                    <div className="movie-main-details">
+                        <div className="movie-poster-left">
+                            <div className="main-movie-poster">
+                                <img src={movieDetail.medium_cover_image} alt={movieDetail.slug} />
                             </div>
                         </div>
-                        <div className="ratings">
-
-                            <div className="imdb-count ratings-counts">
-                                <img src={ImdbIcon} className="imdb-icon" />
-                                <span>{movieDetail.rating}</span>
+                        <div className="movie-details-middle">
+                            <div className="movie-details-title">
+                                <h1>{movieDetail.title}</h1>
+                            </div>
+                            <span className="break-line"></span>
+                            <div className="movie-genres">
+                                <h4>{movieDetail.year}</h4>
+                                <h4>{genres.map((genre, i) => {
+                                    return (<i key={i}>{genre} /</i>);
+                                })} </h4>
                             </div>
 
-                            <div className="like-count ratings-counts">
-                                <img src={LikeIcon} className="rating-icon like-icon" />
-                                <span>{movieDetail.like_count}</span>
+                            <div className="available-in">
+                                <div>Available in:</div>
+                                <div className="formats">
+                                    {
+                                        specs.map((res, i) => {
+                                            return <div key={i} className="available-format">{res.quality}</div>
+                                        })
+                                    }
+                                </div>
                             </div>
+                            <div className="ratings">
 
-                            <div className="like-count ratings-counts">
-                                <img src={DownloadIcon} className="rating-icon download-icon" />
-                                <span>{movieDetail.download_count}</span>
+                                <div className="imdb-count ratings-counts">
+                                    <img src={ImdbIcon} className="imdb-icon" alt="imdb logo" />
+                                    <span>{movieDetail.rating}</span>
+                                </div>
+
+                                <div className="like-count ratings-counts">
+                                    <img src={LikeIcon} className="rating-icon like-icon" alt="heart icon" />
+                                    <span>{movieDetail.like_count}</span>
+                                </div>
+
+                                <div className="like-count ratings-counts">
+                                    <img src={DownloadIcon} className="rating-icon download-icon" alt="download icon" />
+                                    <span>{movieDetail.download_count}</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div className="movie-specs">
-                        <div className="tech-specs">
-                            <h2>Tech specs</h2>
-                            <div className="tech-specs-left-content">
-                                {
-                                    specs.map((spec, i) => {
-                                        return (
-                                            <div className="specs-box" key={i}>
-                                                <div className="specs">
-                                                    <div>
-                                                        <img className="specs-img" src={ResIcon} alt="resoulation icon" />
+                        <div className="movie-specs">
+                            <div className="tech-specs">
+                                <h2>Tech specs</h2>
+                                <div className="tech-specs-left-content">
+                                    {
+                                        specs.map((spec, i) => {
+                                            return (
+                                                <div className="specs-box" key={i}>
+                                                    <div className="specs">
+                                                        <div>
+                                                            <img className="specs-img" src={ResIcon} alt="resoulation icon" />
+                                                        </div>
+                                                        <p className="specs-info">{spec.quality}</p>
                                                     </div>
-                                                    <p className="specs-info">{spec.quality}</p>
-                                                </div>
 
-                                                <div className="specs">
-                                                    <div>
-                                                        <img className="specs-img" src={SizeIcon} alt="size icon" />
+                                                    <div className="specs">
+                                                        <div>
+                                                            <img className="specs-img" src={SizeIcon} alt="size icon" />
+                                                        </div>
+                                                        <p className="specs-info">{spec.size}</p>
                                                     </div>
-                                                    <p className="specs-info">{spec.size}</p>
-                                                </div>
 
-                                                <div className="specs">
-                                                    <div>
-                                                        <img className="specs-img" src={LangIcon} alt="language icon" />
+                                                    <div className="specs">
+                                                        <div>
+                                                            <img className="specs-img" src={LangIcon} alt="language icon" />
+                                                        </div>
+                                                        <p className="specs-info">{movieDetail.language}</p>
                                                     </div>
-                                                    <p className="specs-info">{movieDetail.language}</p>
-                                                </div>
-                                                <div className="specs">
-                                                    <div>
-                                                        <img className="specs-img" src={SeedsIcon} alt="seeds icon" />
+                                                    <div className="specs">
+                                                        <div>
+                                                            <img className="specs-img" src={SeedsIcon} alt="seeds icon" />
+                                                        </div>
+                                                        <p className="specs-info">{spec.seeds}</p>
                                                     </div>
-                                                    <p className="specs-info">{spec.seeds}</p>
-                                                </div>
-                                                <div className="specs">
-                                                    <div>
-                                                        <img className="specs-img peers" src={PeersIcon} alt="peers icon" />
+                                                    <div className="specs">
+                                                        <div>
+                                                            <img className="specs-img peers" src={PeersIcon} alt="peers icon" />
+                                                        </div>
+                                                        <p className="specs-info">{spec.peers}</p>
                                                     </div>
-                                                    <p className="specs-info">{spec.peers}</p>
                                                 </div>
-                                            </div>
-                                        );
-                                    })
-                                }
+                                            );
+                                        })
+                                    }
 
-                                <h2 className="dis-title">Discription </h2>
-                                <p>{movieDetail.description_full}</p>
-                                <div className="upload-date">
-                                    <h3>Upload Date</h3>
-                                    <p>{movieDetail.date_uploaded}</p>
+                                    <h2 className="dis-title">Description </h2>
+                                    <p>{movieDetail.description_full}</p>
+                                    <div className="upload-date">
+                                        <h3>Upload Date</h3>
+                                        <p>{movieDetail.date_uploaded}</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div className="movie-trailer-video">
-                    <div className="movie-trailer-grid">
-                        <div>
-                            <h2>Movie Trailer</h2>
-                            <div className="trailer">
-                                <iframe className="trailer-iframe" width="400px" height="315" src={`https://www.youtube.com/embed/${movieDetail.yt_trailer_code}`}
-                                    frameBorder="0"
-                                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                                    allowFullScreen>
-                                </iframe>
+                    <div className="movie-trailer-video">
+                        <div className="movie-trailer-grid">
+                            <div>
+                                <h2>Movie Trailer</h2>
+                                <div className="trailer">
+                                    <iframe title="selected movie trailer frame" className="trailer-iframe" height="350px" src={`https://www.youtube.com/embed/${movieDetail.yt_trailer_code}`}
+                                        frameBorder="0"
+                                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                        allowFullScreen>
+                                    </iframe>
+                                </div>
                             </div>
-                        </div>
-                        <div className="similar-movies">
-                            <div className="similar-movies-right-contents">
-                                <h2>Similar Movies</h2>
-                                <div className="similar-movies-right">
-                                    {similarMovie.map((movie, i) => {
-                                        return (
-                                            <div key={i} className="similar-movie">
-                                                <Link to={`/movie-details/${movie.id}`} onClick={() => buddiesScroll(scrollRef)}>
-                                                    <img src={movie.medium_cover_image} />
-                                                </Link>
-                                            </div>
-                                        );
-                                    })}
+                            <div className="similar-movies">
+                                <div className="similar-movies-right-contents">
+                                    <h2>Similar Movies</h2>
+                                    <div className="similar-movies-right">
+                                        {similarMovie.map((movie, i) => {
+                                            return (
+                                                <div key={i} className="similar-movie">
+                                                    <Link to={`/movie-details/${movie.id}`} onClick={() => buddiesScroll(scrollRef)}>
+                                                        <img src={movie.medium_cover_image} alt="movie thumbnail" />
+                                                    </Link>
+                                                </div>
+                                            );
+                                        })}
+                                    </div>
                                 </div>
                             </div>
                         </div>
